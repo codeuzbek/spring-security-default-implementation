@@ -44,6 +44,10 @@ public class SpringConfig {
                     .anyRequest()
                     .authenticated();
         }).formLogin(Customizer.withDefaults());
+
+        http.csrf(Customizer.withDefaults()); // csrf yoqilgan
+        http.cors(Customizer.withDefaults()); // cors yoqilgan
+
         return http.build();
 
     }
